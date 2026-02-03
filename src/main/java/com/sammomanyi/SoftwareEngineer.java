@@ -1,8 +1,13 @@
 package com.sammomanyi;
 
+import jakarta.persistence.Entity;
+import jdk.jfr.Enabled;
+
 import java.util.List;
 import java.util.Objects;
 
+//to
+@Entity
 public class SoftwareEngineer {
     private Integer id;
     private String name;
