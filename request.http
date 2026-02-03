@@ -4,3 +4,30 @@ GET http://localhost:8080
 ###
 
 GET http://localhost:8080/api/v1/software-engineers
+
+###
+
+GET http://localhost:8080/api/v1/software-engineers/1
+
+###
+//sending a post request as a json body (amke sure to match the body to the variable names)
+POST http://localhost:8080/api/v1/software-engineers
+Content-Type: application/json
+
+{
+  "name": "Bunjumbura",
+  "techStack": ["node","react","tailwind"]
+}
+
+
+###
+DELETE http://localhost:8080/api/v1/software-engineers/5
+
+###
+PUT http://localhost:8080/api/v1/software-engineers/6
+Content-Type: application/json
+
+{
+  "name": "Bunjumbura",
+  "techStack": ["node","react","javascript"]
+}

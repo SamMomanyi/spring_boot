@@ -1,7 +1,10 @@
 package com.sammomanyi;
 
 import jakarta.persistence.Entity;
-import jdk.jfr.Enabled;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 
 import java.util.List;
 import java.util.Objects;
@@ -9,6 +12,10 @@ import java.util.Objects;
 //to
 @Entity
 public class SoftwareEngineer {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private List<String> techStack;
@@ -20,6 +27,14 @@ public class SoftwareEngineer {
         this.id = id;
         this.name = name;
         this.techStack = techStack;
+    }
+
+    public Integer getId1() {
+        return id;
+    }
+
+    public void setId1(Integer id1) {
+        this.id = id1;
     }
 
     public Integer getId(){
